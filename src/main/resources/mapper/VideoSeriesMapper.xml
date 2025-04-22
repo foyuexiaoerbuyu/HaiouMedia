@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.media.haiou.mapper.VideoSeriesMapper">
+
+    <resultMap id="BaseResultMap" type="com.media.haiou.domain.VideoSeries">
+            <id property="id" column="id" />
+            <result property="title" column="title" />
+            <result property="originalTitle" column="original_title" />
+            <result property="description" column="description" />
+            <result property="coverImage" column="cover_image" />
+            <result property="totalSeasons" column="total_seasons" />
+            <result property="totalEpisodes" column="total_episodes" />
+            <result property="releaseYear" column="release_year" />
+            <result property="country" column="country" />
+            <result property="language" column="language" />
+            <result property="status" column="status" />
+            <result property="createTime" column="create_time" />
+            <result property="updateTime" column="update_time" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,title,original_title,description,cover_image,total_seasons,
+        total_episodes,release_year,country,language,status,
+        create_time,update_time
+    </sql>
+</mapper>

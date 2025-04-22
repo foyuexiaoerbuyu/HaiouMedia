@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.media.haiou.mapper.VideoMetadataMapper">
+
+    <resultMap id="BaseResultMap" type="com.media.haiou.domain.VideoMetadata">
+            <id property="id" column="id" />
+            <result property="mediaId" column="media_id" />
+            <result property="resolution" column="resolution" />
+            <result property="frameRate" column="frame_rate" />
+            <result property="director" column="director" />
+            <result property="actors" column="actors" />
+            <result property="releaseYear" column="release_year" />
+            <result property="episode" column="episode" />
+            <result property="season" column="season" />
+            <result property="subtitlePath" column="subtitle_path" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,media_id,resolution,frame_rate,director,actors,
+        release_year,episode,season,subtitle_path
+    </sql>
+</mapper>
