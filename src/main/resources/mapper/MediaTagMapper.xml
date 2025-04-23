@@ -14,4 +14,11 @@
     <sql id="Base_Column_List">
         id,media_id,tag_id,create_time
     </sql>
+    <insert id="batchInsert" parameterType="java.util.List">
+        INSERT INTO media_tag (media_id, tag_id, create_time)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.mediaId}, #{item.tagId}, #{item.createTime})
+        </foreach>
+    </insert>
 </mapper>

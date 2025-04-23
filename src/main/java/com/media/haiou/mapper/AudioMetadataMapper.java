@@ -2,6 +2,7 @@ package com.media.haiou.mapper;
 
 import com.media.haiou.domain.AudioMetadata;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Select;
 
 /**
 * @author Administrator
@@ -10,6 +11,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @Entity com.media.haiou.domain.AudioMetadata
 */
 public interface AudioMetadataMapper extends BaseMapper<AudioMetadata> {
+    @Select("SELECT * FROM audio_metadata WHERE media_id = #{mediaId}")
+    AudioMetadata selectByMediaId(Long mediaId);
 
 }
 

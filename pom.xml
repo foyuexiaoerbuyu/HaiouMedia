@@ -59,6 +59,11 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>3.0.4</version>
         </dependency>
+        <!-- 主要验证依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>com.mysql</groupId>
@@ -90,6 +95,12 @@
             <groupId>com.media.haiou</groupId>
             <artifactId>HaiouMedia</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version> <!-- 使用最新版本 -->
         </dependency>
     </dependencies>
 

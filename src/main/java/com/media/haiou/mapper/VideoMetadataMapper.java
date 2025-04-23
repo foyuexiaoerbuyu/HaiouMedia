@@ -2,6 +2,7 @@ package com.media.haiou.mapper;
 
 import com.media.haiou.domain.VideoMetadata;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Select;
 
 /**
 * @author Administrator
@@ -10,6 +11,15 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @Entity com.media.haiou.domain.VideoMetadata
 */
 public interface VideoMetadataMapper extends BaseMapper<VideoMetadata> {
+    @Select("SELECT * FROM video_metadata WHERE media_id = #{mediaId}")
+    VideoMetadata selectByMediaId(Long mediaId);
+
+    @Select("SELECT COUNT(*) FROM video_metadata WHERE series_id = #{seriesId}")
+    Integer countBySeriesId(Long seriesId);
+
+//    // 统计指定剧集的视频数量
+//    @Select("SELECT COUNT(*) FROM video_metadata WHERE series_id = #{seriesId}")
+//    Integer countBySeriesId(@Param("seriesId") Long seriesId);
 
 }
 
